@@ -164,6 +164,7 @@ public class ActionAndFileHandling implements ActionListener {
 
         }
     private void saveFile() {
+        JOptionPane.showMessageDialog(launcher, "Choose location for headers file...","", JOptionPane.INFORMATION_MESSAGE);
         JFileChooser chooser = new JFileChooser();
         try {
         int res = chooser.showSaveDialog(launcher);
@@ -184,7 +185,8 @@ public class ActionAndFileHandling implements ActionListener {
                 }
             }
             
-            
+            JOptionPane.showMessageDialog(launcher, "Now choose location for invoices file...","", JOptionPane.INFORMATION_MESSAGE);
+            res = chooser.showSaveDialog(launcher);
             File linef = chooser.getSelectedFile();
             
             FileWriter LineFW = new FileWriter(linef);
